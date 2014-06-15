@@ -9,9 +9,9 @@
   var secondSum = 0;
 
   for (var i = 0; i < funcData.length; i++) {
-      if(funcData[i].type == "beer") {
+      if(funcData[i].type === "beer") {
          allBeers[i] = funcData[i].score;
-      } else if (funcData[i].type == "fries") {
+      } else if (funcData[i].type === "fries") {
        allFries[i] = funcData[i].score;
     }
   }
@@ -26,7 +26,7 @@
   convArray(allBeers);
   convArray(allFries);
 
-  if (allBeers.length == 1) {
+  if (allBeers.length === 1) {
       firstSum = allBeers[0]*allFries[0];
       return firstSum;
   }  else if (allBeers.length < 1) {
