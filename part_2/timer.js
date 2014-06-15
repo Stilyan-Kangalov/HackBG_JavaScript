@@ -47,8 +47,8 @@ function timeContolDown() {
   }
   if (firstInputMin < 0) {
     clearInterval();
-    $("#second-first-digit").text(0);
-    $("#minute-first-digit").text(0);
+    $(".fixer").text(0);
+    $(".fix").text(0);
   }
 }
 
@@ -70,8 +70,8 @@ $("button:nth-of-type(2)").on("click", function() {
 $("button:last").on("click", function() {
     clearInterval(handleOne);
     clearInterval(handleTwo);
-    $("#second-first-digit").text("00");
-    $("#minute-first-digit").text("00");
+    $(".fixer").text("00");
+    $(".fix").text("00");
   });
 
 });
