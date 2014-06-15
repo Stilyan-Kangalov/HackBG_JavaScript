@@ -41,19 +41,19 @@ function timeBackward() {
 }
 
 function timeContolDown() {
-  if (secondInputSec == -1) {
+  if (secondInputSec === -1) {
     firstInputMin--;
     secondInputSec = 59;
   }
   if (firstInputMin < 0) {
     clearInterval();
-    $(".fixer").text(0);
-    $(".fix").text(0);
+    $("#second-first-digit").text(0);
+    $("#minute-first-digit").text(0);
   }
 }
 
 function timeContolUp() {
-  if (secondInputSec == 61) {
+  if (secondInputSec === 61) {
     firstInputMin++;
     secondInputSec = 1;
   }
@@ -70,8 +70,8 @@ $("button:nth-of-type(2)").on("click", function() {
 $("button:last").on("click", function() {
     clearInterval(handleOne);
     clearInterval(handleTwo);
-    $(".fixer").text("00");
-    $(".fix").text("00");
+    $("#second-first-digit").text("00");
+    $("#minute-first-digit").text("00");
   });
 
 });
